@@ -13,19 +13,20 @@ const Update = () => {
     }
   return (
     <div>
+    <h1>Delete User</h1>
       <form onSubmit={handleupdate}>
         <label>
           Id:
           <input type="text" name="id" />
         </label>
-        <label>
+        {/* <label>
           Name:
           <input type="text" name="name" />
         </label>
         <label>
           Age:
           <input type="text" name="age" />
-        </label>
+        </label> */}
 
         <button type="submit">Update</button>
       </form>
