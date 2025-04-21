@@ -14,6 +14,7 @@ const Register= () => {
   }
   return (
     <div>
+      <h1>Register User</h1>
       <form onSubmit={handleregister}>
         <label>
           Name:
