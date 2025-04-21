@@ -1,37 +1,25 @@
-import React from "react";
-import axios from "axios";
-
-const Update = () => {
-    const handleupdate = async (e) => {
+import React from 'react'
+import axios from 'axios'
+const Delete = () => {
+    const handleDelete = async (e) => {
         e.preventDefault();
-        const id = e.target.id.value;
-        const name = e.target.name.value;
-        const age = e.target.age.value;
-        const user = { id, name, age };
-        await axios.delete(`http://localhost:9000/users/${id}`, user);
-        alert("User updated successfully");
-    }
+        const id = e.target.id.value
+        await axios.delete(`http://localhost:9000/users/${id}`)
+        alert('User Deleted successfully')
+      }
   return (
     <div>
-    <h1>Delete User</h1>
-      <form onSubmit={handleupdate}>
+        <h1>Delete User</h1>
+      <form onSubmit={handleDelete}>
         <label>
           Id:
           <input type="text" name="id" />
         </label>
-        {/* <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Age:
-          <input type="text" name="age" />
-        </label> */}
-
-        <button type="submit">Update</button>
+       
+        <button type='submit'>Delete</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Update;
+export default Delete
