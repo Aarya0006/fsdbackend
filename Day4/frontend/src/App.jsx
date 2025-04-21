@@ -1,8 +1,8 @@
 import React from 'react'
 import Register from './components/Register'
-import View from './components/View'
 import Update from './components/Update'
 import Delete from './components/Delete'
+import View from './components/View'
 import './App.css'
 
 
@@ -11,9 +11,9 @@ const App = () => {
     <div>
       <h1>User Registration Form</h1>
       <Register/>
-      <View/>
       <Update/>
       <Delete/>
+      <View/>
     </div>
   )
 }
